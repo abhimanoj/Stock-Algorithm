@@ -8,7 +8,7 @@ we got the BANKNIFTY_RESULT based on rounded value -> BANKNIFTY03AUG1723000PE
 
 we need to find out PE and CE for 9:22 and 3:10---> both closing we need to add X_9 and Y_3---> (X_9-Y_3) 
 
-1)SELECT * FROM MERN_PLUS.BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' LIMIT 10;
+1)SELECT * FROM BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' LIMIT 10;
 
 +----+-----------------------------+------------+----------+------+------+------+-------+--------+-----------------+
 | Id | ticker                      | date       | time     | open | high | low  | close | volume | option_interest |
@@ -17,7 +17,7 @@ we need to find out PE and CE for 9:22 and 3:10---> both closing we need to add 
 +----+-----------------------------+------------+----------+------+------+------+-------+--------+-----------------+
 
 
-2)SELECT * FROM MERN_PLUS.BACKTEST_2016 where (ticker LIKE '%BANKNIFTY-I' OR ticker LIKE '%BANKNIFTY-I.NFO') and  date='05/10/2016' and time='09:22:59';
+2)SELECT * FROM BACKTEST_2016 where (ticker LIKE '%BANKNIFTY-I' OR ticker LIKE '%BANKNIFTY-I.NFO') and  date='05/10/2016' and time='09:22:59';
 
 | Id | ticker          | date       | time     | open    | high    | low   | close | volume | option_interest |
 +----+-----------------+------------+----------+---------+---------+-------+-------+--------+-----------------+
@@ -28,7 +28,7 @@ we need to find out PE and CE for 9:22 and 3:10---> both closing we need to add 
 -close_round= 19800-
 --------------------
 
-3)SELECT * FROM MERN_PLUS.BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' and  date='05/10/2016' and ticker LIKE '%19800%' and time='09:22:59';
+3)SELECT * FROM BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' and  date='05/10/2016' and ticker LIKE '%19800%' and time='09:22:59';
 
 +----+-----------------------------+------------+----------+--------+--------+-------+--------+--------+-----------------+
 | Id | ticker                      | date       | time     | open   | high   | low   | close  | volume | option_interest |
@@ -39,7 +39,7 @@ we need to find out PE and CE for 9:22 and 3:10---> both closing we need to add 
 |  0 | BANKNIFTY27OCT1619800PE.NFO | 05/10/2016 | 09:22:59 |  327.5 |    332 | 327.5 |    332 |     40 |           15240 |
 +----+-----------------------------+------------+----------+--------+--------+-------+--------+--------+-----------------+
 
-4)SELECT * FROM MERN_PLUS.BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' and  date='05/10/2016' and ticker LIKE '%19800%' and time='15:09:59';
+4)SELECT * FROM BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' and  date='05/10/2016' and ticker LIKE '%19800%' and time='15:09:59';
 
 +----+-----------------------------+------------+----------+-------+-------+--------+--------+--------+-----------------+
 | Id | ticker                      | date       | time     | open  | high  | low    | close  | volume | option_interest |
@@ -75,7 +75,7 @@ sub_of_ce_and_pe_6th = 15_09_59_close_ce + 15_09_59_close_pe
 minus_of_5th_and_6th = sub_of_ce_and_pe_5th + sub_of_ce_and_pe_6th
 
 
-1)SELECT * FROM MERN_PLUS.BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' and date='01/09/2016';
+1)SELECT * FROM BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' and date='01/09/2016';
 +----+-------------------------+------------+----------+------+------+------+-------+--------+-----------------+
 | Id | ticker                  | date       | time     | open | high | low  | close | volume | option_interest |
 +----+-------------------------+------------+----------+------+------+------+-------+--------+-----------------+
@@ -83,7 +83,7 @@ minus_of_5th_and_6th = sub_of_ce_and_pe_5th + sub_of_ce_and_pe_6th
 
 
 
-2)SELECT * FROM MERN_PLUS.BACKTEST_2016 where (ticker LIKE '%BANKNIFTY-I' OR ticker LIKE '%BANKNIFTY-I.NFO') and  date='01/09/2016' and time='09:22:59';
+2)SELECT * FROM BACKTEST_2016 where (ticker LIKE '%BANKNIFTY-I' OR ticker LIKE '%BANKNIFTY-I.NFO') and  date='01/09/2016' and time='09:22:59';
 
 +----+-------------+------------+----------+---------+---------+-------+----------+--------+-----------------+
 | Id | ticker      | date       | time     | open    | high    | low   | close    | volume | option_interest |
@@ -96,7 +96,7 @@ minus_of_5th_and_6th = sub_of_ce_and_pe_5th + sub_of_ce_and_pe_6th
 -close_round= 19900-
 --------------------
 
-3)SELECT * FROM MERN_PLUS.BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' and  date='01/09/2016' and ticker LIKE '%19900%' and time='09:22:59';
+3)SELECT * FROM BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' and  date='01/09/2016' and ticker LIKE '%19900%' and time='09:22:59';
 +----+-------------------------+------------+----------+--------+--------+--------+--------+--------+-----------------+
 | Id | ticker                  | date       | time     | open   | high   | low    | close  | volume | option_interest |
 +----+-------------------------+------------+----------+--------+--------+--------+--------+--------+-----------------+
@@ -109,7 +109,7 @@ minus_of_5th_and_6th = sub_of_ce_and_pe_5th + sub_of_ce_and_pe_6th
 +----+-------------------------+------------+----------+--------+--------+--------+--------+--------+-----------------+
 
 
-4)SELECT * FROM MERN_PLUS.BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' and  date='14/07/2016' and ticker LIKE '%18700%' and time='15:09:59';
+4)SELECT * FROM BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' and  date='14/07/2016' and ticker LIKE '%18700%' and time='15:09:59';
  +----+-------------------------+------------+----------+--------+--------+--------+--------+--------+-----------------+
 | Id | ticker                  | date       | time     | open   | high   | low    | close  | volume | option_interest |
 +----+-------------------------+------------+----------+--------+--------+--------+--------+--------+-----------------+
@@ -122,13 +122,9 @@ minus_of_5th_and_6th = sub_of_ce_and_pe_5th + sub_of_ce_and_pe_6th
 +----+-------------------------+------------+----------+--------+--------+--------+--------+--------+-----------------+
 
 
-3)SELECT * FROM MERN_PLUS.BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' and  date='29/09/2016' and ticker LIKE '%19800%' and time='09:22:59';
+3)SELECT * FROM BACKTEST_2016 where ticker LIKE 'BANKNIFTY%' AND ticker NOT LIKE 'BANKNIFTY-%' and  date='29/09/2016' and ticker LIKE '%19800%' and time='09:22:59';
  
 1)We nee to get all BANKNIFTY data where date is thudays.
-2)
-
-
-
 +----+-------------------------+------------+----------+-------+-------+--------+-------+--------+-----------------+
 | Id | ticker                  | date       | time     | open  | high  | low    | close | volume | option_interest |
 +----+-------------------------+------------+----------+-------+-------+--------+-------+--------+-----------------+
@@ -151,12 +147,12 @@ ce=36.45
 
 # Some Query related to logic
 
-SELECT * FROM MERN_PLUS.BACKTEST_2020 where (ticker LIKE '%BANKNIFTY-I' OR ticker LIKE '%BANKNIFTY-I.NFO')'
+SELECT * FROM BACKTEST_2020 where (ticker LIKE '%BANKNIFTY-I' OR ticker LIKE '%BANKNIFTY-I.NFO')'
 
-SELECT ticker, date, time, open, close FROM MERN_PLUS.BACKTEST_2020 where ticker LIKE 'BANKNIFTY%' AND  date='02/01/2020' AND ticker NOT LIKE 'BANKNIFTY-%' and ticker LIKE '%32600%' and time='15:14:59'
+SELECT ticker, date, time, open, close FROM BACKTEST_2020 where ticker LIKE 'BANKNIFTY%' AND  date='02/01/2020' AND ticker NOT LIKE 'BANKNIFTY-%' and ticker LIKE '%32600%' and time='15:14:59'
 
 
-SELECT ticker, date, time, open, close FROM MERN_PLUS.BACKTEST_2020 where ticker LIKE 'BANKNIFTY%' AND  date='01/01/2020'  AND ticker NOT LIKE 'BANKNIFTY-%'  and ticker LIKE '%32300%';
+SELECT ticker, date, time, open, close FROM BACKTEST_2020 where ticker LIKE 'BANKNIFTY%' AND  date='01/01/2020'  AND ticker NOT LIKE 'BANKNIFTY-%'  and ticker LIKE '%32300%';
 
 
 

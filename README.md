@@ -1,8 +1,8 @@
-# README #
 
-This project is responsible for getting stock data based on algorithem.
 
-### Use full Query and logic we build ###
+This project is responsible for getting stock data based on algorithm.
+
+# Use full Query and logic we build ###
 1) Get All BANKNIFTY--> Like  (BANKNIFTY03AUG1723000PE)--single record for day one
 2) Based on day one date we need to get search in ALGO-1-->Result_Data
 3) In Result_Data we need to round nearest 100 of closing price. --->9:22:59(only)

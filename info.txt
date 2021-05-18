@@ -149,7 +149,6 @@ pe=53.65
 ce=36.45
 
 
-
 # Some Query related to logic
 
 SELECT * FROM MERN_PLUS.BACKTEST_2020 where (ticker LIKE '%BANKNIFTY-I' OR ticker LIKE '%BANKNIFTY-I.NFO')'
